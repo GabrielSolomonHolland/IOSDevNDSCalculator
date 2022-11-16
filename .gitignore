@@ -1,0 +1,18 @@
+# Xcode
+## MAC stuff that should be ignored
+*.DS_Store
+*.swp
+*~.nib
+## idk stuff that an online thread said we should ignore
+*.pbxuser
+*.perspective
+*.perspectivev3
+## User settings
+xcuserdata/
+*.xcworkspace
+## App packaging
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+.build/
