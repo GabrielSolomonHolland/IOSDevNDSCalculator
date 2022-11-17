@@ -1,24 +1,191 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="atn-fm-2JC">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="NDSCalculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="gCk-5f-5id">
+                                <rect key="frame" x="57" y="148" width="299" height="608"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KJr-d1-DA9">
+                                        <rect key="frame" x="0.0" y="0.0" width="299" height="175"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="175" id="Iyc-ID-sKj"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Calculator">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="calcButtonOnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GfW-ZQ-Fva"/>
+                                            <segue destination="IwC-cL-0wT" kind="show" identifier="calcSegue" id="7TE-1m-ees"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IcE-8S-LBn">
+                                        <rect key="frame" x="0.0" y="225" width="299" height="158"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="175" id="J8G-4e-Z8c"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Equations">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="equationsButtonOnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RK1-0Q-876"/>
+                                            <segue destination="4Kg-wU-YNM" kind="show" identifier="equationsSegue" id="Vgj-PI-aUc"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V5A-Y4-s5r">
+                                        <rect key="frame" x="0.0" y="433" width="299" height="175"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="175" id="MVS-Vj-tjl"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Tables">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="tableButtonOnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="asr-pY-hJf"/>
+                                            <segue destination="NWX-iR-Lwy" kind="show" identifier="tablesSegue" id="4bh-J3-ZPY"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="51p-py-ghc"/>
+                                    <constraint firstAttribute="height" constant="625" id="cH9-sd-8RI"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9WF-NA-rxu">
+                                <rect key="frame" x="157" y="801" width="100" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="70O-ET-CCu"/>
+                                    <constraint firstAttribute="height" constant="50" id="pPa-iC-Xjh"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Legal Info"/>
+                                <connections>
+                                    <action selector="legalButtonOnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PJi-LH-oak"/>
+                                    <segue destination="Tcy-Ts-rkW" kind="show" identifier="legalSegue" id="UGG-3X-qD5"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottomMargin" secondItem="9WF-NA-rxu" secondAttribute="bottom" constant="13" id="7ey-ma-BJF"/>
+                            <constraint firstItem="gCk-5f-5id" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="37" id="QHQ-WI-qXi"/>
+                            <constraint firstItem="gCk-5f-5id" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="60" id="Sy9-Tn-hG2"/>
+                            <constraint firstItem="9WF-NA-rxu" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="713" id="Yah-eV-TiO"/>
+                            <constraint firstItem="9WF-NA-rxu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="137" id="a4Z-IY-lHr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gCk-5f-5id" secondAttribute="trailing" constant="37" id="a5Q-EN-sIH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9WF-NA-rxu" secondAttribute="trailing" constant="136" id="eeH-Q9-9B4"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="gCk-5f-5id" secondAttribute="bottom" constant="89" id="o1l-NF-Y93"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="lqK-cX-Srv"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="928.98550724637687" y="68.973214285714278"/>
+        </scene>
+        <!--Equations View Controller-->
+        <scene sceneID="lde-5H-dot">
+            <objects>
+                <viewController id="4Kg-wU-YNM" customClass="EquationsViewController" customModule="NDSCalculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aF4-rj-IkU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="lA6-SZ-UXl"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="2K8-rk-pYd"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MuI-JQ-w0d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2228" y="109"/>
+        </scene>
+        <!--Legal View Controller-->
+        <scene sceneID="EjT-yq-b3q">
+            <objects>
+                <viewController id="Tcy-Ts-rkW" customClass="LegalViewController" customModule="NDSCalculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dMU-58-o7n">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="tpG-fK-6fh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="zQm-RB-HHY"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jf8-XS-At6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="962" y="801"/>
+        </scene>
+        <!--Tables View Controller-->
+        <scene sceneID="Vgv-Hr-xIm">
+            <objects>
+                <viewController id="NWX-iR-Lwy" customClass="TablesViewController" customModule="NDSCalculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UaK-kG-OeQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="myf-uu-STq"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="1BR-f3-W6y"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ptL-RC-sbQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2228" y="990"/>
+        </scene>
+        <!--Calculator View Controller-->
+        <scene sceneID="ehb-o4-uJ6">
+            <objects>
+                <viewController id="IwC-cL-0wT" customClass="CalculatorViewController" customModule="NDSCalculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0Kv-Fm-QjV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="goB-ab-x0w"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="NXq-cA-lGh"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tiS-jV-wWS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2228" y="-657"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="eTh-0m-xPV">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="atn-fm-2JC" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="MOO-ah-kn1">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="3a1-L6-Oen"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w3o-Ns-wLX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="68.973214285714278"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
