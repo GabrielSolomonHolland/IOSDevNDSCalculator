@@ -17,13 +17,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="gCk-5f-5id">
-                                <rect key="frame" x="57" y="148" width="299" height="608"/>
+                                <rect key="frame" x="57" y="88" width="300" height="625"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KJr-d1-DA9">
-                                        <rect key="frame" x="0.0" y="0.0" width="299" height="175"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="175"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="175" id="Iyc-ID-sKj"/>
                                         </constraints>
+                                        <color key="tintColor" systemColor="systemPurpleColor"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Calculator">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
@@ -34,10 +35,11 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IcE-8S-LBn">
-                                        <rect key="frame" x="0.0" y="225" width="299" height="158"/>
+                                        <rect key="frame" x="0.0" y="225" width="300" height="175"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="175" id="J8G-4e-Z8c"/>
                                         </constraints>
+                                        <color key="tintColor" systemColor="systemPurpleColor"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Equations">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
@@ -48,10 +50,11 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V5A-Y4-s5r">
-                                        <rect key="frame" x="0.0" y="433" width="299" height="175"/>
+                                        <rect key="frame" x="0.0" y="450" width="300" height="175"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="175" id="MVS-Vj-tjl"/>
                                         </constraints>
+                                        <color key="tintColor" systemColor="systemPurpleColor"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Tables">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
@@ -65,14 +68,17 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="51p-py-ghc"/>
                                     <constraint firstAttribute="height" constant="625" id="cH9-sd-8RI"/>
+                                    <constraint firstItem="KJr-d1-DA9" firstAttribute="top" secondItem="gCk-5f-5id" secondAttribute="top" id="ucT-OT-nmR"/>
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9WF-NA-rxu">
-                                <rect key="frame" x="157" y="801" width="100" height="31"/>
+                                <rect key="frame" x="157" y="728" width="100" height="50"/>
+                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="70O-ET-CCu"/>
                                     <constraint firstAttribute="height" constant="50" id="pPa-iC-Xjh"/>
                                 </constraints>
+                                <color key="tintColor" systemColor="systemGray6Color"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Legal Info"/>
                                 <connections>
@@ -82,16 +88,15 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemTealColor"/>
                         <constraints>
-                            <constraint firstAttribute="bottomMargin" secondItem="9WF-NA-rxu" secondAttribute="bottom" constant="13" id="7ey-ma-BJF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9WF-NA-rxu" secondAttribute="bottom" constant="50" id="7J8-t9-gw8"/>
+                            <constraint firstItem="9WF-NA-rxu" firstAttribute="top" secondItem="gCk-5f-5id" secondAttribute="bottom" constant="15" id="9gZ-5R-g8S"/>
+                            <constraint firstItem="gCk-5f-5id" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="IEz-Eo-zar"/>
                             <constraint firstItem="gCk-5f-5id" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="37" id="QHQ-WI-qXi"/>
-                            <constraint firstItem="gCk-5f-5id" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="60" id="Sy9-Tn-hG2"/>
-                            <constraint firstItem="9WF-NA-rxu" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="713" id="Yah-eV-TiO"/>
                             <constraint firstItem="9WF-NA-rxu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="137" id="a4Z-IY-lHr"/>
                             <constraint firstAttribute="trailingMargin" secondItem="gCk-5f-5id" secondAttribute="trailing" constant="37" id="a5Q-EN-sIH"/>
                             <constraint firstAttribute="trailingMargin" secondItem="9WF-NA-rxu" secondAttribute="trailing" constant="136" id="eeH-Q9-9B4"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="gCk-5f-5id" secondAttribute="bottom" constant="89" id="o1l-NF-Y93"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="lqK-cX-Srv"/>
@@ -123,6 +128,17 @@
                     <view key="view" contentMode="scaleToFill" id="dMU-58-o7n">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="N0S-FW-s8r">
+                                <rect key="frame" x="87" y="151" width="240" height="508"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">This is a school project and is not complete. This is not intended for actual use. We are not liable in any capacity for any miscalculations. By using this app you acknowledge that you have completely verified the calculations from our open source repository linked below. github.com/gabrielsolomonholland/iosndscalculator</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="tpG-fK-6fh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
@@ -130,7 +146,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jf8-XS-At6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="962" y="801"/>
+            <point key="canvasLocation" x="960.86956521739137" y="800.89285714285711"/>
         </scene>
         <!--Tables View Controller-->
         <scene sceneID="Vgv-Hr-xIm">
@@ -184,8 +200,20 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
