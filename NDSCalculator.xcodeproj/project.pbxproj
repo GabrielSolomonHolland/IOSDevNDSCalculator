@@ -11,6 +11,8 @@
 		DB53483A2926284100BFF7FC /* EquationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5348392926284100BFF7FC /* EquationsViewController.swift */; };
 		DB53483C2926285100BFF7FC /* TablesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB53483B2926285100BFF7FC /* TablesViewController.swift */; };
 		DB53483E2926285F00BFF7FC /* LegalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB53483D2926285F00BFF7FC /* LegalViewController.swift */; };
+		DBF3D6D9293EB3BC00C1E8D9 /* TableImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF3D6D8293EB3BC00C1E8D9 /* TableImageViewController.swift */; };
+		DBF3D6DB293EB4BC00C1E8D9 /* Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF3D6DA293EB4BC00C1E8D9 /* Info.swift */; };
 		F4C35C2C291153670085C7A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C35C2B291153670085C7A3 /* AppDelegate.swift */; };
 		F4C35C2E291153670085C7A3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C35C2D291153670085C7A3 /* SceneDelegate.swift */; };
 		F4C35C30291153670085C7A3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C35C2F291153670085C7A3 /* HomeViewController.swift */; };
@@ -44,6 +46,8 @@
 		DB5348392926284100BFF7FC /* EquationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquationsViewController.swift; sourceTree = "<group>"; };
 		DB53483B2926285100BFF7FC /* TablesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TablesViewController.swift; sourceTree = "<group>"; };
 		DB53483D2926285F00BFF7FC /* LegalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegalViewController.swift; sourceTree = "<group>"; };
+		DBF3D6D8293EB3BC00C1E8D9 /* TableImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableImageViewController.swift; sourceTree = "<group>"; };
+		DBF3D6DA293EB4BC00C1E8D9 /* Info.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Info.swift; sourceTree = "<group>"; };
 		F4C35C28291153670085C7A3 /* NDSCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NDSCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4C35C2B291153670085C7A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4C35C2D291153670085C7A3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,7 +91,9 @@
 		F4C35C1F291153670085C7A3 = {
 			isa = PBXGroup;
 			children = (
+				DBF3D6DA293EB4BC00C1E8D9 /* Info.swift */,
 				DB53483D2926285F00BFF7FC /* LegalViewController.swift */,
+				DBF3D6D8293EB3BC00C1E8D9 /* TableImageViewController.swift */,
 				DB53483B2926285100BFF7FC /* TablesViewController.swift */,
 				DB5348392926284100BFF7FC /* EquationsViewController.swift */,
 				DB5348372926282E00BFF7FC /* CalculatorViewController.swift */,
@@ -273,6 +279,8 @@
 				F4C35C30291153670085C7A3 /* HomeViewController.swift in Sources */,
 				F4C35C2C291153670085C7A3 /* AppDelegate.swift in Sources */,
 				DB53483E2926285F00BFF7FC /* LegalViewController.swift in Sources */,
+				DBF3D6DB293EB4BC00C1E8D9 /* Info.swift in Sources */,
+				DBF3D6D9293EB3BC00C1E8D9 /* TableImageViewController.swift in Sources */,
 				DB5348382926282F00BFF7FC /* CalculatorViewController.swift in Sources */,
 				DB53483C2926285100BFF7FC /* TablesViewController.swift in Sources */,
 				DB53483A2926284100BFF7FC /* EquationsViewController.swift in Sources */,
